@@ -1243,7 +1243,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
   });
 
   /* 네이버 톡톡 버튼 — ID가 비어 있으면 버튼을 숨김 */
-  var NAVER_TALK_ID = '';
+  var NAVER_TALK_ID = 'trendymakert';
   Array.prototype.forEach.call(document.querySelectorAll('[data-talk]'), function(a){
     if(NAVER_TALK_ID){ a.href = 'https://talk.naver.com/ct/' + NAVER_TALK_ID; }
     else { a.remove(); }
