@@ -447,6 +447,8 @@ form .btn{width:100%}
 .map-ph b{position:relative;display:block;margin-top:6px;font-size:14.5px}
 .map-ph .sub2{position:relative;display:block;margin-top:4px;font-size:12.8px;color:rgba(255,255,255,.72);font-weight:500}
 .loc-info .addr{font-size:15.5px;font-weight:800;color:var(--ink);margin-top:8px}
+.loc-info .hours{font-size:13.6px;font-weight:700;color:var(--accent-2);margin-top:4px}
+.info .notice{display:inline-block;margin-top:6px;font-style:normal;font-size:12.5px;font-weight:800;color:#FF8A98;padding:3px 10px;border-radius:999px;background:rgba(198,40,85,.22)}
 .loc-info{padding:26px 30px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
 .loc-info h4{font-size:18px;font-weight:800}
 .loc-info p{margin:6px 0 0;font-size:13.8px;color:var(--muted)}
@@ -674,7 +676,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
       <div class="stat"><b><span class="count" data-to="9">0</span><span class="u">가지</span></b><span>운동 프로그램</span></div>
       <div class="stat"><b><span class="count" data-to="50">0</span><span class="u">분</span></b><span>모든 수업 진행 시간</span></div>
       <div class="stat"><b><span class="count" data-to="2">0</span><span class="u">개</span></b><span>A · B 전용 스튜디오</span></div>
-      <div class="stat"><b>9<span class="u">–</span>21<span class="u">시</span></b><span>기구필라테스 운영</span></div>
+      <div class="stat"><b>06<span class="u">–</span>23<span class="u">시</span></b><span>평일 영업시간 (토 08–20시)</span></div>
     </div>
   </div>
 </section>
@@ -962,6 +964,10 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
         <div class="a"><p>네. 회원, 트레이너, 데스크 직원까지 모두 여성입니다. 라커·샤워실·파우더룸을 포함한 전 공간이 여성 전용으로 운영됩니다.</p></div>
       </div>
       <div class="qa rv">
+        <button type="button"><span class="qm">Q.</span>영업시간이 어떻게 되나요?<span class="plus"></span></button>
+        <div class="a"><p>평일(월–금) 06:00 – 23:00, 토요일 08:00 – 20:00 운영하며 일요일은 정기휴무입니다. 출근 전 새벽 운동부터 퇴근 후 밤 운동까지 가능합니다. 그룹 수업(기구필라테스·GX)은 별도 시간표를 확인해 주세요.</p></div>
+      </div>
+      <div class="qa rv">
         <button type="button"><span class="qm">Q.</span>수업 시간은 얼마나 되나요?<span class="plus"></span></button>
         <div class="a"><p>A룸 기구필라테스, B룸 GX 모두 50분 수업으로 동일하게 진행됩니다. 기구필라테스는 오전 9시부터 저녁 9시까지, GX는 오전 9시 30분부터 저녁 8시 30분 수업까지 운영됩니다.</p></div>
       </div>
@@ -1004,8 +1010,8 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
     <div class="trial-grid">
       <div class="info-list rv">
         <div class="info"><span class="ico">✉️</span><div><b>Email</b><span><a href="mailto:trendymakert@gmail.com">trendymakert@gmail.com</a></span></div></div>
-        <div class="info"><span class="ico">🧘‍♀️</span><div><b>A룸 기구필라테스</b><span>월–금 09:00 – 21:00<br>토 09:00 – 12:00</span></div></div>
-        <div class="info"><span class="ico">✨</span><div><b>B룸 NEW GX</b><span>월–금 09:30 – 21:20<br>(모든 수업 50분)</span></div></div>
+        <div class="info"><span class="ico">🕒</span><div><b>영업시간</b><span>월–금 06:00 – 23:00<br>토 08:00 – 20:00<br>일 정기휴무<br><em class="notice">09/24 – 09/26 추석 연휴 휴무</em></span></div></div>
+        <div class="info"><span class="ico">📅</span><div><b>그룹 수업</b><span>A룸 기구필라테스 · B룸 GX<br><a href="#schedule">주간 시간표 보기 →</a></span></div></div>
         <div class="info"><span class="ico">📍</span><div><b>오시는 길</b><span>서울시 동대문구 왕산로 190, 지하 2층<br>청량리역 5번 · 6번출구 중간지점</span></div></div>
       </div>
 
@@ -1037,10 +1043,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
             <label for="visit">방문 희망 시간대</label>
             <select id="visit" name="visit">
               <option value="">선택해 주세요</option>
+              <option>이른 아침 (06:00–09:00)</option>
               <option>오전 (09:00–12:00)</option>
               <option>오후 (12:00–18:00)</option>
-              <option>저녁 (18:00–21:30)</option>
-              <option>토요일</option>
+              <option>저녁 (18:00–23:00)</option>
+              <option>토요일 (08:00–20:00)</option>
             </select>
           </div>
           <div class="field">
@@ -1085,6 +1092,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
         <div>
           <h4>트렌디우먼휘트니스 청량리역점</h4>
           <p class="addr">서울시 동대문구 왕산로 190, 지하 2층</p>
+          <p class="hours">영업시간 월–금 06:00 – 23:00 · 토 08:00 – 20:00 · 일 정기휴무</p>
           <p>블리비의원 건물 지하 2층 · 청량리역 5번출구와 6번출구 중간지점</p>
         </div>
         <a href="https://map.naver.com/p/entry/place/1645431365" target="_blank" rel="noopener" class="btn btn-grad">네이버 지도로 보기 <span class="arw">→</span></a>
@@ -1097,7 +1105,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
   <div class="wrap">
     <div class="f-cards">
       <div class="f-card"><b>여성전용 통합 운동센터</b><p>헬스 · PT · 기구필라테스 · 바레 · 번지피지오 · 웰니스요가 · 다이어트댄스를 한 곳에서.</p></div>
-      <div class="f-card"><b>모든 수업 50분</b><p>정시에 시작해 낭비 없이. 아침 9시부터 저녁까지 원하는 시간에 골라 들으세요.</p></div>
+      <div class="f-card"><b>새벽 6시부터 밤 11시까지</b><p>평일 06:00 – 23:00, 토 08:00 – 20:00 운영. 출근 전에도 퇴근 후에도 원하는 시간에 오세요. (일요일 휴무)</p></div>
       <div class="f-card"><b>무료 상담 &amp; 방문</b><p>등록 강요 없이 공간을 먼저 경험해 보세요. 메일로 편하게 문의 주세요.</p></div>
     </div>
     <div class="f-top">
