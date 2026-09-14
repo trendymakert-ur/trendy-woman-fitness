@@ -1,7 +1,3 @@
-# Vercel API 배포 스크립트가 만드는 임시 파일
-upload.json
-deploy.json
-payload.json
 
 # Vercel 로컬 링크 정보
 .vercel
