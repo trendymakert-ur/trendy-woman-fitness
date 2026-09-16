@@ -306,6 +306,11 @@ td.off{color:#C9CDD3;font-size:13px}
 .stat b .u{font-size:.45em;margin-left:2px}
 .stat span{display:block;margin-top:9px;font-size:13.3px;color:var(--muted-d);font-weight:600}
 
+.card-link{display:flex;flex-direction:column}
+.card-link p{flex:1}
+.card-more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13.5px;font-weight:800;color:#FF6E80;transition:gap .3s,color .3s}
+.card-more:hover{gap:10px;color:#fff}
+
 /* ---------- PT system (Rappo) ---------- */
 .rp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .rp{background:var(--gray);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s,border-color .45s,background .45s}
@@ -837,11 +842,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
 <section class="bg-dark">
   <div class="wrap">
     <div class="head rv">
-      <span class="eyebrow">Our Trainers</span>
-      <h2 class="h2">왜 트렌디우먼 트레이너는<br>다를까요?</h2>
-      <p>여성의 몸을 가장 잘 이해하는, 여성 전문 트레이너가 함께합니다.</p>
+      <span class="eyebrow">1:1 Personal Training</span>
+      <h2 class="h2">왜 트렌디우먼휘트니스<br>1:1 PT는 다를까요?</h2>
+      <p>사람과 시스템, 두 가지가 다릅니다.<br>여성의 몸을 가장 잘 이해하는 여성 전문 트레이너가, 기록으로 관리하는 시스템 위에서 함께합니다.</p>
     </div>
-    <div class="g2">
+    <div class="g3">
       <div class="card rv">
         <span class="ico">🎓</span>
         <h3>여성 전문 · 전문 자격 보유</h3>
@@ -852,6 +857,12 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
         <h3>등록 강요 없는 안내</h3>
         <p>헬스 회원권만 이용하셔도 기구 사용법 안내와 질문 응대는 동일하게 제공됩니다. PT는 필요하다고 느끼실 때 시작하시면 됩니다.</p>
       </div>
+      <div class="card rv card-link">
+        <span class="ico">📊</span>
+        <h3>감이 아니라 기록으로 관리</h3>
+        <p>무게 · 횟수 · 식단 · 컨디션까지 매 수업이 앱에 남습니다. 담당이 바뀌어도 기록은 센터에 그대로 이어집니다.</p>
+        <a href="#system" class="card-more">실제 앱 화면 보기 ↓</a>
+      </div>
     </div>
   </div>
 </section>
@@ -861,8 +872,8 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow">PT Management System</span>
-      <h2 class="h2">기록이 쌓이는 PT,<br><span class="g">라포(Rappo)</span>로 관리합니다</h2>
-      <p>트렌디우먼휘트니스의 모든 PT는 회원관리 앱 <b>라포</b>로 운영됩니다. 수업 하나하나가 기록으로 남고, 내 몸의 변화가 그래프로 보입니다.</p>
+      <h2 class="h2">그래서 1:1 PT는<br><span class="g">라포(Rappo)</span>로 관리합니다</h2>
+      <p>트렌디우먼휘트니스의 모든 1:1 PT는 회원관리 앱 <b>라포</b>로 운영됩니다. 수업 하나하나가 기록으로 남고, 내 몸의 변화가 그래프로 보입니다.</p>
     </div>
     <div class="rp-grid">
       <div class="rp rv">
