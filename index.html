@@ -339,10 +339,6 @@ td.off{color:#C9CDD3;font-size:13px}
 /* ---------- reviews ---------- */
 .review{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
 .review:hover{transform:translateY(-7px);box-shadow:var(--sh)}
-.rimg{display:none;margin:0 0 18px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--gray)}
-.rimg.has-img{display:block}
-.rimg img{width:100%;height:210px;object-fit:cover;object-position:top center;transition:transform .55s cubic-bezier(.22,1,.36,1)}
-.rimg:hover img{transform:scale(1.04)}
 .review .meta{display:flex;align-items:center;gap:8px;margin-bottom:13px;flex-wrap:wrap}
 .badge{font-size:11px;font-weight:800;padding:5px 11px;border-radius:999px;background:var(--grad);color:#fff}
 .badge.g{background:var(--light);color:var(--accent-2)}
@@ -910,7 +906,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
     </div>
     <div class="g3">
       <div class="review rv">
-        <a class="rimg" href="review-1.png" target="_blank" rel="noopener"><img src="review-1.png" alt="회원 후기 캡처 1" onload="this.parentNode.classList.add('has-img')" onerror="this.parentNode.remove()"></a>
         <div class="meta"><span class="badge">네이버 리뷰</span><small>1년 이상 이용 회원</small></div>
         <div class="stars">★★★★★</div>
         <p>1년 넘게 다녔는데 시설 깔끔하고 센터 선생님들도 친절합니다. 체력도 많이 늘었고 선생님께서 세세하게 가르쳐주셔서 다이어트도 계속 하고 있습니다. 추천합니다.</p>
@@ -918,35 +913,30 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
         <div class="who"><span class="av">햇</span><div><b>햇님590</b><span>네이버 리뷰 · 7번째 방문</span></div></div>
       </div>
       <div class="review rv">
-        <a class="rimg" href="review-2.png" target="_blank" rel="noopener"><img src="review-2.png" alt="회원 후기 캡처 2" onload="this.parentNode.classList.add('has-img')" onerror="this.parentNode.remove()"></a>
         <div class="meta"><span class="badge g">필라테스 후기</span><small>그룹 기구필라테스</small></div>
         <div class="stars">★★★★★</div>
         <p>기구가 있으니 확실히 자세가 잡혀요. 혼자 하면 어디에 힘을 줘야 하는지 몰랐는데, 50분이 금방 지나갑니다. 오전반이라 하루가 개운해요.</p>
         <div class="who"><span class="av">이</span><div><b>이○○ 회원님</b><span>그룹 기구필라테스</span></div></div>
       </div>
       <div class="review rv">
-        <a class="rimg" href="review-3.png" target="_blank" rel="noopener"><img src="review-3.png" alt="회원 후기 캡처 3" onload="this.parentNode.classList.add('has-img')" onerror="this.parentNode.remove()"></a>
         <div class="meta"><span class="badge">PT 후기</span><small>PT 20회 완주</small></div>
         <div class="stars">★★★★★</div>
         <p>이제 와서 시작해도 괜찮을까 걱정이 많았는데, 무릎 상태까지 확인하시고 강도를 조절해 주셔서 무리 없이 다니고 있어요. 계단 오를 때 숨이 덜 차는 게 제일 큰 변화입니다.</p>
         <div class="who"><span class="av">박</span><div><b>박○○ 회원님</b><span>PT 20회 완주</span></div></div>
       </div>
       <div class="review rv">
-        <a class="rimg" href="review-4.png" target="_blank" rel="noopener"><img src="review-4.png" alt="회원 후기 캡처 4" onload="this.parentNode.classList.add('has-img')" onerror="this.parentNode.remove()"></a>
         <div class="meta"><span class="badge g">GX 후기</span><small>번지피지오</small></div>
         <div class="stars">★★★★★</div>
         <p>번지피지오 진짜 신세계예요. 운동이라기보다 노는 느낌인데 다음 날 온몸이 다 뻐근합니다. 지루할 틈이 없어서 계속 나오게 돼요.</p>
         <div class="who"><span class="av">최</span><div><b>최○○ 회원님</b><span>번지피지오</span></div></div>
       </div>
       <div class="review rv">
-        <a class="rimg" href="review-5.png" target="_blank" rel="noopener"><img src="review-5.png" alt="회원 후기 캡처 5" onload="this.parentNode.classList.add('has-img')" onerror="this.parentNode.remove()"></a>
         <div class="meta"><span class="badge">GX 후기</span><small>다이어트댄스</small></div>
         <div class="stars">★★★★☆</div>
         <p>러닝머신은 10분도 못 버텼는데 다이어트댄스는 50분이 훅 지나가요. 음악이 좋아서 스트레스가 확 풀립니다. 퇴근 후 낙이 생겼어요.</p>
         <div class="who"><span class="av">정</span><div><b>정○○ 회원님</b><span>다이어트댄스</span></div></div>
       </div>
       <div class="review rv">
-        <a class="rimg" href="review-6.png" target="_blank" rel="noopener"><img src="review-6.png" alt="회원 후기 캡처 6" onload="this.parentNode.classList.add('has-img')" onerror="this.parentNode.remove()"></a>
         <div class="meta"><span class="badge g">GX 후기</span><small>웰니스요가</small></div>
         <div class="stars">★★★★★</div>
         <p>하루 종일 앉아 있어서 몸이 굳어 있었는데, 요가 끝나고 나면 어깨가 확 가벼워져요. 운동이면서 쉬는 시간 같아서 좋습니다.</p>
