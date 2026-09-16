@@ -210,6 +210,7 @@ header.scrolled{padding:8px 0;box-shadow:0 4px 20px -14px rgba(17,24,39,.6)}
 
 /* ---------- program list (dark) ---------- */
 .plist{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pitem:last-child:nth-child(odd){grid-column:1/-1}
 .pitem{
   display:grid;grid-template-columns:1fr auto;grid-template-areas:"en tag" "txt txt";align-items:center;gap:8px 14px;
   padding:14px 18px;border-radius:var(--r);background:rgba(255,255,255,.05);border:1px solid var(--line-d);
@@ -300,11 +301,11 @@ td.off{color:#C9CDD3;font-size:13px}
 
 /* ---------- stats ---------- */
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.stat{text-align:center;padding:20px 14px;border-radius:var(--r);background:rgba(255,255,255,.05);border:1px solid var(--line-d);transition:background .4s,transform .4s}
-.stat:hover{background:rgba(255,255,255,.1);transform:translateY(-5px)}
-.stat b{display:block;font-size:clamp(28px,4.4vw,42px);font-weight:800;letter-spacing:-.05em;line-height:1;color:#FF6E80}
+.stat{text-align:center;padding:20px 14px;border-radius:var(--r);background:#fff;border:1px solid var(--line);transition:background .4s,transform .4s}
+.stat:hover{box-shadow:var(--sh);transform:translateY(-5px)}
+.stat b{display:block;font-size:clamp(28px,4.4vw,42px);font-weight:800;letter-spacing:-.05em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .stat b .u{font-size:.45em;margin-left:2px}
-.stat span{display:block;margin-top:9px;font-size:13.3px;color:var(--muted-d);font-weight:600}
+.stat span{display:block;margin-top:9px;font-size:13.3px;color:var(--muted);font-weight:600}
 
 .card-link{display:flex;flex-direction:column}
 .card-link p{flex:1}
@@ -536,10 +537,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
       <span class="txt"><b>트렌디우먼휘트니스</b><small>청량리역점</small></span>
     </a>
     <nav class="menu">
-      <a href="#about">ABOUT</a>
+      <a href="#about">FITNESS</a>
+      <a href="#space">GALLERY</a>
+      <a href="#pt">PT</a>
       <a href="#class">CLASS</a>
       <a href="#schedule">SCHEDULE</a>
-      <a href="#space">GALLERY</a>
       <a href="#review">REVIEW</a>
       <a href="#price">PRICE</a>
       <a href="#faq">FAQ</a>
@@ -552,10 +554,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about">소개<em>ABOUT</em></a>
+  <a href="#about">헬스<em>FITNESS</em></a>
+  <a href="#space">갤러리<em>GALLERY</em></a>
+  <a href="#pt">1:1 PT<em>PT</em></a>
   <a href="#class">클래스<em>CLASS</em></a>
   <a href="#schedule">시간표<em>SCHEDULE</em></a>
-  <a href="#space">갤러리<em>GALLERY</em></a>
   <a href="#review">후기<em>REVIEW</em></a>
   <a href="#price">요금<em>PRICE</em></a>
   <a href="#faq">자주 묻는 질문<em>FAQ</em></a>
@@ -601,11 +604,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
 <section class="bg-gray" id="about">
   <div class="wrap">
     <div class="head rv">
-      <span class="eyebrow">Why Trendy Woman?</span>
-      <h2 class="h2">나에게 맞는 운동을<br>아직 찾지 못하셨나요?</h2>
+      <span class="eyebrow">Fitness · Women Only</span>
+      <h2 class="h2">여성전용 헬스,<br><span class="g">청량리역 최대규모</span></h2>
       <p>
-        기구 사용법도 모르는데 아무도 알려주지 않는 곳, 시선이 신경 쓰여 구석에서만 걷다 오는 곳.<br>
-        운동이 몸에 익기도 전에 지치는 건 의지의 문제가 아니라, 공간이 맞지 않았던 겁니다.
+        시선이 신경 쓰여 구석에서만 걷다 오는 헬스장은 이제 그만.<br>
+        회원은 모두 여성, 새벽 6시부터 밤 11시까지 눈치 보지 않고 운동하는 공간입니다.
       </p>
     </div>
     <div class="g3">
@@ -625,6 +628,95 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         <p>시설만 이용하셔도 혼자 두지 않습니다. 기구 사용법은 트레이너가 직접 알려드리고, 필요할 땐 1:1로 더 깊게 함께합니다.</p>
       </div>
     </div>
+    <div class="stat-grid rv" style="margin-top:22px">
+      <div class="stat"><b><span class="count" data-to="9">0</span><span class="u">가지</span></b><span>운동 프로그램</span></div>
+      <div class="stat"><b><span class="count" data-to="50">0</span><span class="u">분</span></b><span>모든 수업 진행 시간</span></div>
+      <div class="stat"><b><span class="count" data-to="2">0</span><span class="u">개</span></b><span>A · B 전용 스튜디오</span></div>
+      <div class="stat"><b>06<span class="u">–</span>23<span class="u">시</span></b><span>평일 영업시간 (토 08–20시)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM GALLERY ===== -->
+<section class="bg-white" id="space">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Program Gallery</span>
+      <h2 class="h2">여섯 가지 움직임, <span class="g">한 공간</span>에서</h2>
+      <p>1:1 PT부터 다이어트댄스까지. 오늘 컨디션에 맞는 운동을 골라보세요.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="gal rv">
+      <div class="gcard"><img src="program-1.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">01</span><div><b>1:1 PT</b><span>여성 전문 트레이너 · 라포로 기록 관리</span></div></div>
+      <div class="gcard"><img src="program-2.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">02</span><div><b>기구필라테스</b><span>1:1 / 7:1 그룹 · 리포머 · 캐딜락</span></div></div>
+      <div class="gcard"><img src="program-3.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">03</span><div><b>바레</b><span>발레 감성 코어 · 밸런스</span></div></div>
+      <div class="gcard"><img src="program-4.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">04</span><div><b>웰니스요가</b><span>몸과 마음의 균형</span></div></div>
+      <div class="gcard"><img src="program-5.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">05</span><div><b>번지피지오</b><span>탄성을 이용한 전신 운동</span></div></div>
+      <div class="gcard"><img src="program-6.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">06</span><div><b>다이어트댄스</b><span>신나는 음악 · 유산소</span></div></div>
+    </div>
+    <p class="note rv">좌우로 밀어서 더 보실 수 있습니다</p>
+  </div>
+</section>
+
+<!-- ===== TRAINERS ===== -->
+<section class="bg-dark" id="pt">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">1:1 Personal Training</span>
+      <h2 class="h2">왜 트렌디우먼휘트니스<br>1:1 PT는 다를까요?</h2>
+      <p>사람과 시스템, 두 가지가 다릅니다.<br>여성의 몸을 가장 잘 이해하는 여성 전문 트레이너가, 기록으로 관리하는 시스템 위에서 함께합니다.</p>
+    </div>
+    <div class="g3">
+      <div class="card rv">
+        <span class="ico">🎓</span>
+        <h3>여성 전문 · 전문 자격 보유</h3>
+        <p>해부학적 지식부터 기구 사용 지도까지, 자격을 갖춘 여성 전문 트레이너만 수업에 들어갑니다. 여성의 체형 변화와 몸의 시기를 이해하고 강도를 조절합니다.</p>
+      </div>
+      <div class="card rv">
+        <span class="ico">🤝</span>
+        <h3>등록 강요 없는 안내</h3>
+        <p>헬스 회원권만 이용하셔도 기구 사용법 안내와 질문 응대는 동일하게 제공됩니다. PT는 필요하다고 느끼실 때 시작하시면 됩니다.</p>
+      </div>
+      <div class="card rv card-link">
+        <span class="ico">📊</span>
+        <h3>감이 아니라 기록으로 관리</h3>
+        <p>무게 · 횟수 · 식단 · 컨디션까지 매 수업이 앱에 남습니다. 담당이 바뀌어도 기록은 센터에 그대로 이어집니다.</p>
+        <a href="#system" class="card-more">실제 앱 화면 보기 ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PT SYSTEM (RAPPO) ===== -->
+<section class="bg-white" id="system">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">PT Management System</span>
+      <h2 class="h2">그래서 1:1 PT는<br><span class="g">라포(Rappo)</span>로 관리합니다</h2>
+      <p>트렌디우먼휘트니스의 모든 1:1 PT는 회원관리 앱 <b>라포</b>로 운영됩니다. 수업 하나하나가 기록으로 남고, 내 몸의 변화가 그래프로 보입니다.</p>
+    </div>
+    <div class="rp-chips rv">
+      <span>📈 운동 기록 · 변화 그래프</span>
+      <span>🥗 AI 식단 관리</span>
+      <span>🩺 당일 컨디션 체크</span>
+      <span>📱 앱 예약 · 잔여 회차 · 알림</span>
+    </div>
+    <div class="rp-screens rv">
+      <p class="rp-sub">회원님이 직접 보게 되는 실제 라포 앱 화면</p>
+      <div class="ph-row">
+        <figure class="ph"><div class="ph-frame"><img src="rappo-1.png" alt="운동 기록 화면" loading="lazy"></div><figcaption><b>운동 기록</b>세트별 무게·횟수, 총 볼륨 6,000kg 자동 계산</figcaption></figure>
+        <figure class="ph"><div class="ph-frame"><img src="rappo-2.png" alt="회원 변화 그래프 화면" loading="lazy"></div><figcaption><b>변화 그래프</b>부위별 볼륨 · 체중 변화</figcaption></figure>
+        <figure class="ph"><div class="ph-frame"><img src="rappo-3.png" alt="AI 식단 화면" loading="lazy"></div><figcaption><b>AI 식단</b>사진 한 장으로 칼로리 · 탄단지 자동 기록</figcaption></figure>
+        <figure class="ph"><div class="ph-frame"><img src="rappo-4.png" alt="컨디션 체크 화면" loading="lazy"></div><figcaption><b>컨디션 체크</b>오늘의 전반적인 컨디션</figcaption></figure>
+        <figure class="ph"><div class="ph-frame"><img src="rappo-5.png" alt="수면시간 체크 화면" loading="lazy"></div><figcaption><b>수면 체크</b>어젯밤 수면 시간</figcaption></figure>
+        <figure class="ph"><div class="ph-frame"><img src="rappo-6.png" alt="통증 위치 기록 화면" loading="lazy"></div><figcaption><b>통증 위치</b>아픈 부위를 수업 전에 공유</figcaption></figure>
+      </div>
+    </div>
+    <div class="rp-note rv">
+      <span class="rp-badge">Official Case</span>
+      <p>트렌디우먼휘트니스는 <a href="https://www.rappomanager.info/case" target="_blank" rel="noopener">라포 공식 고객 사례</a>에 소개된 센터입니다. 기록은 트레이너가 아니라 센터에 남아, 담당이 바뀌어도 내 데이터는 그대로 이어집니다.</p>
+    </div>
   </div>
 </section>
 
@@ -632,9 +724,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
 <section class="bg-dark" id="class">
   <div class="wrap">
     <div class="head rv">
-      <span class="eyebrow">Our Programs</span>
+      <span class="eyebrow">Classes · A룸 &amp; B룸</span>
       <h2 class="h2">여성에게 꼭 필요한 움직임을<br>모두 담았습니다</h2>
-      <p>오늘 컨디션과 목표에 맞춰 골라서. 언제든 다른 수업으로 바꾸실 수 있습니다.</p>
+      <p>기구필라테스부터 다이어트댄스까지. 오늘 컨디션과 목표에 맞춰 골라서, 언제든 다른 수업으로 바꾸실 수 있습니다.</p>
     </div>
     <div class="plist">
       <div class="pitem rv">
@@ -662,17 +754,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         <p>“신나는 음악 + 유산소 + 칼로리 소모” — 러닝머신만 뛰는 다이어트가 지겨웠다면. 음악에 맞춰 움직이다 보면 50분이 훅 지나갑니다.</p>
         <span class="tagx">B룸</span>
       </div>
-      <div class="pitem rv">
-        <div class="en"><b>FITNESS &amp; PT</b><small>| 헬스 · 1:1 PT</small></div>
-        <p>“기본은 탄탄하게” — 여성 체형에 맞춘 머신 구성의 헬스존, 그리고 체형 분석부터 식단까지 함께하는 여성 전문 트레이너 1:1 트레이닝.</p>
-        <span class="tagx">헬스존</span>
-      </div>
-    </div>
-    <div class="stat-grid rv" style="margin-top:44px">
-      <div class="stat"><b><span class="count" data-to="9">0</span><span class="u">가지</span></b><span>운동 프로그램</span></div>
-      <div class="stat"><b><span class="count" data-to="50">0</span><span class="u">분</span></b><span>모든 수업 진행 시간</span></div>
-      <div class="stat"><b><span class="count" data-to="2">0</span><span class="u">개</span></b><span>A · B 전용 스튜디오</span></div>
-      <div class="stat"><b>06<span class="u">–</span>23<span class="u">시</span></b><span>평일 영업시간 (토 08–20시)</span></div>
     </div>
   </div>
 </section>
@@ -771,89 +852,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         </table>
       </div>
       <p class="note">※ '오픈예정' 수업은 순차적으로 오픈됩니다. 수업 일정은 사정에 따라 변경될 수 있습니다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROGRAM GALLERY ===== -->
-<section class="bg-white" id="space">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="eyebrow">Program Gallery</span>
-      <h2 class="h2">여섯 가지 움직임, <span class="g">한 공간</span>에서</h2>
-      <p>1:1 PT부터 다이어트댄스까지. 오늘 컨디션에 맞는 운동을 골라보세요.</p>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="gal rv">
-      <div class="gcard"><img src="program-1.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">01</span><div><b>1:1 PT</b><span>여성 전문 트레이너 · 라포로 기록 관리</span></div></div>
-      <div class="gcard"><img src="program-2.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">02</span><div><b>기구필라테스</b><span>1:1 / 7:1 그룹 · 리포머 · 캐딜락</span></div></div>
-      <div class="gcard"><img src="program-3.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">03</span><div><b>바레</b><span>발레 감성 코어 · 밸런스</span></div></div>
-      <div class="gcard"><img src="program-4.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">04</span><div><b>웰니스요가</b><span>몸과 마음의 균형</span></div></div>
-      <div class="gcard"><img src="program-5.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">05</span><div><b>번지피지오</b><span>탄성을 이용한 전신 운동</span></div></div>
-      <div class="gcard"><img src="program-6.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="n">06</span><div><b>다이어트댄스</b><span>신나는 음악 · 유산소</span></div></div>
-    </div>
-    <p class="note rv">좌우로 밀어서 더 보실 수 있습니다</p>
-  </div>
-</section>
-
-<!-- ===== TRAINERS ===== -->
-<section class="bg-dark">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="eyebrow">1:1 Personal Training</span>
-      <h2 class="h2">왜 트렌디우먼휘트니스<br>1:1 PT는 다를까요?</h2>
-      <p>사람과 시스템, 두 가지가 다릅니다.<br>여성의 몸을 가장 잘 이해하는 여성 전문 트레이너가, 기록으로 관리하는 시스템 위에서 함께합니다.</p>
-    </div>
-    <div class="g3">
-      <div class="card rv">
-        <span class="ico">🎓</span>
-        <h3>여성 전문 · 전문 자격 보유</h3>
-        <p>해부학적 지식부터 기구 사용 지도까지, 자격을 갖춘 여성 전문 트레이너만 수업에 들어갑니다. 여성의 체형 변화와 몸의 시기를 이해하고 강도를 조절합니다.</p>
-      </div>
-      <div class="card rv">
-        <span class="ico">🤝</span>
-        <h3>등록 강요 없는 안내</h3>
-        <p>헬스 회원권만 이용하셔도 기구 사용법 안내와 질문 응대는 동일하게 제공됩니다. PT는 필요하다고 느끼실 때 시작하시면 됩니다.</p>
-      </div>
-      <div class="card rv card-link">
-        <span class="ico">📊</span>
-        <h3>감이 아니라 기록으로 관리</h3>
-        <p>무게 · 횟수 · 식단 · 컨디션까지 매 수업이 앱에 남습니다. 담당이 바뀌어도 기록은 센터에 그대로 이어집니다.</p>
-        <a href="#system" class="card-more">실제 앱 화면 보기 ↓</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PT SYSTEM (RAPPO) ===== -->
-<section class="bg-white" id="system">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="eyebrow">PT Management System</span>
-      <h2 class="h2">그래서 1:1 PT는<br><span class="g">라포(Rappo)</span>로 관리합니다</h2>
-      <p>트렌디우먼휘트니스의 모든 1:1 PT는 회원관리 앱 <b>라포</b>로 운영됩니다. 수업 하나하나가 기록으로 남고, 내 몸의 변화가 그래프로 보입니다.</p>
-    </div>
-    <div class="rp-chips rv">
-      <span>📈 운동 기록 · 변화 그래프</span>
-      <span>🥗 AI 식단 관리</span>
-      <span>🩺 당일 컨디션 체크</span>
-      <span>📱 앱 예약 · 잔여 회차 · 알림</span>
-    </div>
-    <div class="rp-screens rv">
-      <p class="rp-sub">회원님이 직접 보게 되는 실제 라포 앱 화면</p>
-      <div class="ph-row">
-        <figure class="ph"><div class="ph-frame"><img src="rappo-1.png" alt="운동 기록 화면" loading="lazy"></div><figcaption><b>운동 기록</b>세트별 무게·횟수, 총 볼륨 6,000kg 자동 계산</figcaption></figure>
-        <figure class="ph"><div class="ph-frame"><img src="rappo-2.png" alt="회원 변화 그래프 화면" loading="lazy"></div><figcaption><b>변화 그래프</b>부위별 볼륨 · 체중 변화</figcaption></figure>
-        <figure class="ph"><div class="ph-frame"><img src="rappo-3.png" alt="AI 식단 화면" loading="lazy"></div><figcaption><b>AI 식단</b>사진 한 장으로 칼로리 · 탄단지 자동 기록</figcaption></figure>
-        <figure class="ph"><div class="ph-frame"><img src="rappo-4.png" alt="컨디션 체크 화면" loading="lazy"></div><figcaption><b>컨디션 체크</b>오늘의 전반적인 컨디션</figcaption></figure>
-        <figure class="ph"><div class="ph-frame"><img src="rappo-5.png" alt="수면시간 체크 화면" loading="lazy"></div><figcaption><b>수면 체크</b>어젯밤 수면 시간</figcaption></figure>
-        <figure class="ph"><div class="ph-frame"><img src="rappo-6.png" alt="통증 위치 기록 화면" loading="lazy"></div><figcaption><b>통증 위치</b>아픈 부위를 수업 전에 공유</figcaption></figure>
-      </div>
-    </div>
-    <div class="rp-note rv">
-      <span class="rp-badge">Official Case</span>
-      <p>트렌디우먼휘트니스는 <a href="https://www.rappomanager.info/case" target="_blank" rel="noopener">라포 공식 고객 사례</a>에 소개된 센터입니다. 기록은 트레이너가 아니라 센터에 남아, 담당이 바뀌어도 내 데이터는 그대로 이어집니다.</p>
     </div>
   </div>
 </section>
@@ -1048,8 +1046,8 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         </div>
       </div>
       <div class="f-links">
-        <a href="#about">ABOUT</a><a href="#class">CLASS</a><a href="#schedule">SCHEDULE</a>
-        <a href="#space">GALLERY</a><a href="#review">REVIEW</a><a href="#price">PRICE</a>
+        <a href="#about">FITNESS</a><a href="#space">GALLERY</a><a href="#pt">PT</a>
+        <a href="#class">CLASS</a><a href="#schedule">SCHEDULE</a><a href="#review">REVIEW</a><a href="#price">PRICE</a>
         <a href="#faq">FAQ</a><a href="mailto:trendymakert@gmail.com">CONTACT</a>
       </div>
     </div>
