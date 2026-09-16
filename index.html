@@ -498,8 +498,20 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
   .burger{display:grid}
   section{padding:40px 0}
   .g3,.g2,.ben-grid,.f-cards{grid-template-columns:1fr}
-  .prow{grid-template-columns:1fr;gap:9px}
-  .pnum{text-align:left}
+  .prow{grid-template-columns:1fr auto;grid-template-areas:"term btn" "desc desc";gap:2px 10px;padding:11px 14px;align-items:center}
+  .term{grid-area:term}.desc{grid-area:desc;font-size:12.8px}.pnum{grid-area:btn;text-align:right}
+  .term b{font-size:16px}.term small{font-size:11px}
+  .ask{padding:8px 13px;font-size:12.5px}
+  .price-list{gap:6px}
+  .table-wrap{overflow:hidden}
+  table{min-width:0;table-layout:fixed}
+  th,td{padding:6px 2px;font-size:11px}
+  thead th{font-size:11px;padding:8px 2px}
+  th:first-child,td:first-child{width:46px}
+  td.time{font-size:11.5px;line-height:1.2}
+  td.time small{font-size:9px}
+  td .cl{display:block;white-space:normal;word-break:keep-all;font-size:10px;line-height:1.25;padding:4px 3px;border-radius:8px}
+  td.off{font-size:11px}
   .scroll-hint{display:none}
   .hero{text-align:center;justify-content:center;padding:106px 0 78px}
   .hero-logo{align-items:center;margin:0 auto 18px}
@@ -795,29 +807,29 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
           <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr></thead>
           <tbody>
             <tr><td class="time"><small>오전</small>9:00</td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td></tr>
             <tr><td class="time"><small>오전</small>10:00</td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td></tr>
             <tr><td class="time"><small>오전</small>11:00</td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td></tr>
             <tr><td class="time"><small>오전</small>12:00</td>
-              <td><span class="cl">기구필라테스</span></td><td class="off">–</td><td><span class="cl">기구필라테스</span></td>
-              <td class="off">–</td><td><span class="cl">기구필라테스</span></td><td class="off">–</td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td class="off">–</td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td class="off">–</td><td><span class="cl">기구<wbr>필라테스</span></td><td class="off">–</td></tr>
             <tr class="divide"><td class="time"><small>오후</small>6:00</td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td class="off">–</td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td class="off">–</td></tr>
             <tr><td class="time"><small>오후</small>7:00</td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td class="off">–</td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td class="off">–</td></tr>
             <tr><td class="time"><small>오후</small>8:00</td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td class="off">–</td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td class="off">–</td></tr>
             <tr><td class="time"><small>오후</small>9:00</td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td>
-              <td><span class="cl">기구필라테스</span></td><td><span class="cl">기구필라테스</span></td><td class="off">–</td></tr>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td>
+              <td><span class="cl">기구<wbr>필라테스</span></td><td><span class="cl">기구<wbr>필라테스</span></td><td class="off">–</td></tr>
           </tbody>
         </table>
       </div>
@@ -831,23 +843,23 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
           <thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr></thead>
           <tbody>
             <tr><td class="time"><small>오전</small>9:30</td>
-              <td><span class="cl yoga">웰니스요가</span></td><td><span class="cl">바레</span></td><td><span class="cl yoga">웰니스요가</span></td>
-              <td><span class="cl">바레</span></td><td><span class="cl yoga">웰니스요가</span></td></tr>
+              <td><span class="cl yoga">웰니스<wbr>요가</span></td><td><span class="cl">바레</span></td><td><span class="cl yoga">웰니스<wbr>요가</span></td>
+              <td><span class="cl">바레</span></td><td><span class="cl yoga">웰니스<wbr>요가</span></td></tr>
             <tr><td class="time"><small>오전</small>10:30</td>
-              <td><span class="cl bungee">번지피지오</span></td><td><span class="cl soon">오픈예정</span></td><td><span class="cl bungee">번지피지오</span></td>
-              <td><span class="cl soon">오픈예정</span></td><td><span class="cl bungee">번지피지오</span></td></tr>
+              <td><span class="cl bungee">번지<wbr>피지오</span></td><td><span class="cl soon">오픈<wbr>예정</span></td><td><span class="cl bungee">번지<wbr>피지오</span></td>
+              <td><span class="cl soon">오픈<wbr>예정</span></td><td><span class="cl bungee">번지<wbr>피지오</span></td></tr>
             <tr><td class="time"><small>오전</small>11:30</td>
-              <td><span class="cl bungee">번지피지오</span></td><td class="off">–</td><td><span class="cl bungee">번지피지오</span></td>
-              <td class="off">–</td><td><span class="cl bungee">번지피지오</span></td></tr>
+              <td><span class="cl bungee">번지<wbr>피지오</span></td><td class="off">–</td><td><span class="cl bungee">번지<wbr>피지오</span></td>
+              <td class="off">–</td><td><span class="cl bungee">번지<wbr>피지오</span></td></tr>
             <tr class="divide"><td class="time"><small>오후</small>6:30</td>
-              <td><span class="cl dance">다이어트댄스</span></td><td><span class="cl bungee">번지피지오</span></td><td><span class="cl dance">다이어트댄스</span></td>
-              <td><span class="cl bungee">번지피지오</span></td><td><span class="cl dance">다이어트댄스</span></td></tr>
+              <td><span class="cl dance">다이어트<wbr>댄스</span></td><td><span class="cl bungee">번지<wbr>피지오</span></td><td><span class="cl dance">다이어트<wbr>댄스</span></td>
+              <td><span class="cl bungee">번지<wbr>피지오</span></td><td><span class="cl dance">다이어트<wbr>댄스</span></td></tr>
             <tr><td class="time"><small>오후</small>7:30</td>
-              <td><span class="cl">바레</span></td><td><span class="cl bungee">번지피지오</span></td><td><span class="cl">바레</span></td>
-              <td><span class="cl bungee">번지피지오</span></td><td><span class="cl">바레</span></td></tr>
+              <td><span class="cl">바레</span></td><td><span class="cl bungee">번지<wbr>피지오</span></td><td><span class="cl">바레</span></td>
+              <td><span class="cl bungee">번지<wbr>피지오</span></td><td><span class="cl">바레</span></td></tr>
             <tr><td class="time"><small>오후</small>8:30</td>
-              <td><span class="cl">바레</span></td><td><span class="cl yoga">웰니스요가</span></td><td><span class="cl">바레</span></td>
-              <td><span class="cl yoga">웰니스요가</span></td><td><span class="cl soon">오픈예정</span></td></tr>
+              <td><span class="cl">바레</span></td><td><span class="cl yoga">웰니스<wbr>요가</span></td><td><span class="cl">바레</span></td>
+              <td><span class="cl yoga">웰니스<wbr>요가</span></td><td><span class="cl soon">오픈<wbr>예정</span></td></tr>
           </tbody>
         </table>
       </div>
