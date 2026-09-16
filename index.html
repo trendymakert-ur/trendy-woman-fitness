@@ -316,6 +316,18 @@ td.off{color:#C9CDD3;font-size:13px}
 .stat b .u{font-size:.45em;margin-left:2px}
 .stat span{display:block;margin-top:9px;font-size:13.3px;color:var(--muted-d);font-weight:600}
 
+/* ---------- PT system (Rappo) ---------- */
+.rp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rp{background:var(--gray);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s,border-color .45s,background .45s}
+.rp:hover{transform:translateY(-7px);box-shadow:var(--sh);border-color:rgba(198,40,85,.3);background:#fff}
+.rp .ico{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;font-size:23px;background:var(--light);margin-bottom:16px}
+.rp h3{font-size:17px;font-weight:800;margin-bottom:9px;letter-spacing:-.035em}
+.rp p{margin:0;font-size:13.8px;color:var(--muted);line-height:1.8}
+.rp-note{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:860px;margin:30px auto 0;padding:18px 22px;border-radius:16px;background:var(--light);border:1px solid rgba(198,40,85,.2)}
+.rp-badge{flex:none;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--grad);color:#fff}
+.rp-note p{margin:0;font-size:13.8px;color:#4B5563;line-height:1.75}
+.rp-note a{color:var(--accent-2);font-weight:800;border-bottom:1px solid rgba(198,40,85,.4)}
+
 /* ---------- reviews ---------- */
 .review{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
 .review:hover{transform:translateY(-7px);box-shadow:var(--sh)}
@@ -495,6 +507,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
 @media (max-width:1080px){.menu a{padding:8px 9px;font-size:13px}}
 @media (max-width:1024px){
   .g3{grid-template-columns:1fr 1fr}
+  .rp-grid{grid-template-columns:1fr 1fr}
   .tl{grid-template-columns:1fr}
   .tl::before{display:none}
   .stat-grid{grid-template-columns:1fr 1fr}
@@ -504,6 +517,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
 }
 @media (max-width:820px){
   .menu,.nav-right .btn{display:none}
+  .rp-grid{grid-template-columns:1fr}
   .burger{display:grid}
   section{padding:64px 0}
   .g3,.g2,.ben-grid,.f-cards{grid-template-columns:1fr}
@@ -839,6 +853,43 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
         <h3>등록 강요 없는 안내</h3>
         <p>헬스 회원권만 이용하셔도 기구 사용법 안내와 질문 응대는 동일하게 제공됩니다. PT는 필요하다고 느끼실 때 시작하시면 됩니다.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PT SYSTEM (RAPPO) ===== -->
+<section class="bg-white" id="system">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">PT Management System</span>
+      <h2 class="h2">기록이 쌓이는 PT,<br><span class="g">라포(Rappo)</span>로 관리합니다</h2>
+      <p>트렌디우먼휘트니스의 모든 PT는 회원관리 앱 <b>라포</b>로 운영됩니다. 수업 하나하나가 기록으로 남고, 내 몸의 변화가 그래프로 보입니다.</p>
+    </div>
+    <div class="rp-grid">
+      <div class="rp rv">
+        <span class="ico">📈</span>
+        <h3>운동 기록 · 변화 그래프</h3>
+        <p>세트별 무게·횟수를 기록하면 총 볼륨이 자동 계산되고, 체중·부위별 변화가 그래프로 쌓입니다. 감이 아니라 숫자로 보는 내 몸의 변화.</p>
+      </div>
+      <div class="rp rv">
+        <span class="ico">🥗</span>
+        <h3>AI 식단 관리</h3>
+        <p>식사 사진 한 장이면 칼로리·탄단지가 자동으로 기록됩니다. 따로 적을 필요 없이, 트레이너가 식단까지 함께 봅니다.</p>
+      </div>
+      <div class="rp rv">
+        <span class="ico">🩺</span>
+        <h3>당일 컨디션 체크</h3>
+        <p>수업 전 오늘 컨디션을 체크하면 트레이너가 그날의 강도를 맞춥니다. 첫 수업·중간·마지막 리뷰로 피드백도 꾸준히 반영됩니다.</p>
+      </div>
+      <div class="rp rv">
+        <span class="ico">📱</span>
+        <h3>앱 예약 · 잔여 회차 · 알림</h3>
+        <p>예약과 남은 회차가 앱에 투명하게 보입니다. 수업 알림과 트레이너 1:1 메신저까지, 카톡 예약·수기 장부 없이 착오 없는 관리.</p>
+      </div>
+    </div>
+    <div class="rp-note rv">
+      <span class="rp-badge">Official Case</span>
+      <p>트렌디우먼휘트니스는 <a href="https://www.rappomanager.info/case" target="_blank" rel="noopener">라포 공식 고객 사례</a>에 소개된 센터입니다. 기록은 트레이너가 아니라 센터에 남아, 담당이 바뀌어도 내 데이터는 그대로 이어집니다.</p>
     </div>
   </div>
 </section>
