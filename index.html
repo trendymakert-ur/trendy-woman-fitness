@@ -207,16 +207,6 @@ header.scrolled{padding:8px 0;box-shadow:0 4px 20px -14px rgba(17,24,39,.6)}
 .bg-dark .card p{color:var(--muted-d)}
 .bg-dark .card .ico{background:rgba(198,40,85,.24)}
 
-/* wide band image placeholder */
-.band{
-  margin-top:44px;border-radius:var(--r-lg);overflow:hidden;position:relative;height:300px;
-  background:linear-gradient(115deg,#0F1115 0%,#3A1220 50%,#C62855 100%);
-  display:flex;align-items:flex-end;padding:32px 34px;color:#fff;
-}
-.band::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 24%,rgba(255,255,255,.16),transparent 55%)}
-.band .t{position:relative}
-.band b{display:block;font-size:clamp(18px,2.6vw,26px);font-weight:800;letter-spacing:-.04em}
-.band span{display:block;margin-top:6px;font-size:14px;color:rgba(255,255,255,.7)}
 
 /* ---------- program list (dark) ---------- */
 .plist{display:grid;gap:16px}
@@ -526,7 +516,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
   .opt-grid{grid-template-columns:1fr}
   .f-row{grid-template-columns:1fr}
   .scroll-hint{display:none}
-  .band{height:230px;padding:24px}
   .hero{text-align:center;justify-content:center;padding:106px 0 78px}
   .hero-logo{align-items:center;margin:0 auto 18px}
   .hero h1,.hero-sub{max-width:100%;margin-left:auto;margin-right:auto}
@@ -648,12 +637,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:56px 0 34px;fo
         <span class="ico">🤍</span>
         <h3>끝까지 함께하는 관리</h3>
         <p>시설만 이용하셔도 혼자 두지 않습니다. 기구 사용법은 트레이너가 직접 알려드리고, 필요할 땐 1:1로 더 깊게 함께합니다.</p>
-      </div>
-    </div>
-    <div class="band rv">
-      <div class="t">
-        <b>A룸 기구필라테스 · B룸 NEW GX</b>
-        <span>전용 스튜디오 2개를 따로 운영해, 서로 방해받지 않고 집중할 수 있습니다</span>
       </div>
     </div>
   </div>
