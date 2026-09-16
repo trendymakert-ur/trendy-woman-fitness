@@ -536,6 +536,14 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
   .fu{opacity:1;transform:none}
 }
 </style>
+<!-- Microsoft Clarity: 사용자 행동 분석 (히트맵·세션 녹화) -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "yj61zef5jt");
+</script>
 </head>
 <body>
 
@@ -1166,6 +1174,23 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
     if(NAVER_TALK_ID){ a.href = 'https://talk.naver.com/ct/' + NAVER_TALK_ID; }
     else { a.remove(); }
   });
+
+  /* Clarity 전환 이벤트 — 톡톡 상담 / 지도 클릭 (어느 위치의 버튼인지 태그로 구분) */
+  function track(name, where){
+    if(typeof window.clarity !== 'function') return;
+    window.clarity('event', name);
+    if(where){ window.clarity('set', name + '_from', where); }
+  }
+  function positionOf(a){
+    if(a.classList.contains('sticky-cta')) return 'sticky';
+    var s = a.closest('section[id], header, footer');
+    return s ? (s.id || s.tagName.toLowerCase()) : 'page';
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-talk]'), function(a){
+    a.addEventListener('click', function(){ track('talk_click', positionOf(a)); });
+  });
+  var mapBox = document.getElementById('mapBox');
+  if(mapBox){ mapBox.addEventListener('click', function(){ track('map_click'); }); }
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
