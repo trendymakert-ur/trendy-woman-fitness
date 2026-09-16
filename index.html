@@ -126,7 +126,7 @@ header.scrolled{padding:8px 0;box-shadow:0 4px 20px -14px rgba(17,24,39,.6)}
 
 /* ---------- hero ---------- */
 .hero{
-  min-height:min(86svh,720px);display:flex;align-items:center;justify-content:flex-start;text-align:left;
+  min-height:min(78svh,640px);display:flex;align-items:center;justify-content:flex-start;text-align:left;
   padding:104px 0 64px;position:relative;overflow:hidden;color:var(--ink);
   background:linear-gradient(120deg,#FFFBFC 0%,#FDF1F4 55%,#FBE8ED 100%);
 }
@@ -256,7 +256,7 @@ header.scrolled{padding:8px 0;box-shadow:0 4px 20px -14px rgba(17,24,39,.6)}
 .sched-note b{color:var(--accent-2)}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-sm)}
 table{width:100%;border-collapse:collapse;min-width:660px}
-th,td{padding:9px 8px;text-align:center;font-size:13px;border-bottom:1px solid var(--line)}
+th,td{padding:7px 8px;text-align:center;font-size:13px;border-bottom:1px solid var(--line)}
 thead th{background:var(--dark);color:#fff;font-weight:800;border-bottom:none;font-size:13.8px}
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background .22s}
@@ -277,7 +277,7 @@ td.off{color:#C9CDD3;font-size:13px}
 .gal::-webkit-scrollbar{height:6px}
 .gal::-webkit-scrollbar-thumb{background:rgba(198,40,85,.3);border-radius:99px}
 .gcard{
-  flex:0 0 220px;scroll-snap-align:start;height:190px;border-radius:var(--r-lg);overflow:hidden;
+  flex:0 0 200px;scroll-snap-align:start;height:150px;border-radius:var(--r-lg);overflow:hidden;
   position:relative;display:flex;align-items:flex-end;padding:22px;color:#fff;
   transition:transform .45s cubic-bezier(.22,1,.36,1);
 }
@@ -316,7 +316,9 @@ td.off{color:#C9CDD3;font-size:13px}
 .rp .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:19px;background:var(--light);margin-bottom:10px}
 .rp h3{font-size:15.5px;font-weight:800;margin-bottom:6px;letter-spacing:-.035em}
 .rp p{margin:0;font-size:12.8px;color:var(--muted);line-height:1.65}
-.rp-screens{margin-top:28px}
+.rp-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.rp-chips span{font-size:13.5px;font-weight:800;padding:9px 16px;border-radius:999px;background:var(--light);color:var(--accent-2);border:1px solid rgba(198,40,85,.22)}
+.rp-screens{margin-top:22px}
 .rp-sub{text-align:center;margin:0 0 22px;font-size:13.5px;font-weight:700;color:var(--muted)}
 .ph-row{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
 .ph{margin:0;text-align:center}
@@ -378,10 +380,8 @@ td.off{color:#C9CDD3;font-size:13px}
 .ask:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-2px)}
 .ask .arw{transition:transform .28s}
 .ask:hover .arw{transform:translateX(3px)}
-.opt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:880px;margin:18px auto 0}
-.opt{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--light);border:1px dashed rgba(198,40,85,.4);border-radius:14px;padding:16px 20px;font-size:14px;font-weight:700;color:var(--accent-2)}
-.opt span{font-weight:800;white-space:nowrap}
-.opt span i{font-style:normal;font-weight:700;font-size:12.5px;opacity:.7;margin-left:1px}
+.opt-line{max-width:880px;margin:14px auto 0;text-align:center;font-size:13.5px;color:var(--muted);padding:12px 18px;border-radius:12px;background:var(--light);border:1px dashed rgba(198,40,85,.35)}
+.opt-line b{color:var(--accent-2)}
 .price-foot{max-width:880px;margin:22px auto 0;text-align:center;font-size:12.7px;color:var(--muted);line-height:1.9}
 .price-foot b{color:var(--accent-2)}
 .ben-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
@@ -440,29 +440,15 @@ td.off{color:#C9CDD3;font-size:13px}
 .info a:hover{border-color:#fff}
 
 /* ---------- location ---------- */
-.loc-box{max-width:900px;margin:0 auto;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--sh-sm)}
-.map-ph{height:170px;position:relative;display:grid;place-items:center;text-align:center;background:linear-gradient(150deg,#0F1115,#5A1226 60%,#C62855);color:#fff;overflow:hidden}
-.map-ph::before{content:"";position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:42px 42px}
-.map-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
-.map-ph:hover img{transform:scale(1.03)}
-.map-ph.has-img{height:clamp(260px,34vw,400px);background:var(--gray)}
-.map-ph.has-img::before,.map-ph.has-img .ph-in{display:none}
+.map-strip{display:block;position:relative;max-width:1040px;height:180px;margin:14px auto 0;border-radius:18px;overflow:hidden;border:1px solid var(--line-d)}
+.map-strip img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.map-strip:hover img{transform:scale(1.03)}
 .map-chip{
-  position:absolute;left:16px;bottom:16px;z-index:2;display:none;align-items:center;
+  position:absolute;left:14px;bottom:14px;right:14px;z-index:2;display:inline-flex;align-items:center;width:max-content;max-width:calc(100% - 28px);
   padding:9px 16px;border-radius:999px;background:rgba(15,17,21,.86);backdrop-filter:blur(6px);
   color:#fff;font-size:12.8px;font-weight:700;letter-spacing:-.02em;box-shadow:0 8px 20px -10px rgba(0,0,0,.8);
 }
-.map-ph.has-img .map-chip{display:inline-flex}
-.map-ph .pin{position:relative;font-size:34px;animation:bob 2.6s ease-in-out infinite}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.map-ph b{position:relative;display:block;margin-top:6px;font-size:14.5px}
-.map-ph .sub2{position:relative;display:block;margin-top:4px;font-size:12.8px;color:rgba(255,255,255,.72);font-weight:500}
-.loc-info .addr{font-size:15.5px;font-weight:800;color:var(--ink);margin-top:8px}
-.loc-info .hours{font-size:13.6px;font-weight:700;color:var(--accent-2);margin-top:4px}
 .info .notice{display:inline-block;margin-top:6px;font-style:normal;font-size:12.5px;font-weight:800;color:#FF8A98;padding:3px 10px;border-radius:999px;background:rgba(198,40,85,.22)}
-.loc-info{padding:26px 30px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
-.loc-info h4{font-size:18px;font-weight:800}
-.loc-info p{margin:6px 0 0;font-size:13.8px;color:var(--muted)}
 
 /* ---------- footer ---------- */
 footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;font-size:14px}
@@ -511,7 +497,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
   .g3,.g2,.ben-grid,.f-cards{grid-template-columns:1fr}
   .prow{grid-template-columns:1fr;gap:9px}
   .pnum{text-align:left}
-  .opt-grid{grid-template-columns:1fr}
   .scroll-hint{display:none}
   .hero{text-align:center;justify-content:center;padding:106px 0 78px}
   .hero-logo{align-items:center;margin:0 auto 18px}
@@ -849,30 +834,14 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
       <h2 class="h2">그래서 1:1 PT는<br><span class="g">라포(Rappo)</span>로 관리합니다</h2>
       <p>트렌디우먼휘트니스의 모든 1:1 PT는 회원관리 앱 <b>라포</b>로 운영됩니다. 수업 하나하나가 기록으로 남고, 내 몸의 변화가 그래프로 보입니다.</p>
     </div>
-    <div class="rp-grid">
-      <div class="rp rv">
-        <span class="ico">📈</span>
-        <h3>운동 기록 · 변화 그래프</h3>
-        <p>세트별 무게·횟수를 기록하면 총 볼륨이 자동 계산되고, 체중·부위별 변화가 그래프로 쌓입니다. 감이 아니라 숫자로 보는 내 몸의 변화.</p>
-      </div>
-      <div class="rp rv">
-        <span class="ico">🥗</span>
-        <h3>AI 식단 관리</h3>
-        <p>식사 사진 한 장이면 칼로리·탄단지가 자동으로 기록됩니다. 따로 적을 필요 없이, 트레이너가 식단까지 함께 봅니다.</p>
-      </div>
-      <div class="rp rv">
-        <span class="ico">🩺</span>
-        <h3>당일 컨디션 체크</h3>
-        <p>수업 전 오늘 컨디션을 체크하면 트레이너가 그날의 강도를 맞춥니다. 첫 수업·중간·마지막 리뷰로 피드백도 꾸준히 반영됩니다.</p>
-      </div>
-      <div class="rp rv">
-        <span class="ico">📱</span>
-        <h3>앱 예약 · 잔여 회차 · 알림</h3>
-        <p>예약과 남은 회차가 앱에 투명하게 보입니다. 수업 알림과 트레이너 1:1 메신저까지, 카톡 예약·수기 장부 없이 착오 없는 관리.</p>
-      </div>
+    <div class="rp-chips rv">
+      <span>📈 운동 기록 · 변화 그래프</span>
+      <span>🥗 AI 식단 관리</span>
+      <span>🩺 당일 컨디션 체크</span>
+      <span>📱 앱 예약 · 잔여 회차 · 알림</span>
     </div>
     <div class="rp-screens rv">
-      <p class="rp-sub">실제 라포 앱 화면 — 회원님이 직접 보게 되는 화면입니다</p>
+      <p class="rp-sub">회원님이 직접 보게 되는 실제 라포 앱 화면</p>
       <div class="ph-row">
         <figure class="ph"><div class="ph-frame"><img src="rappo-1.png" alt="운동 기록 화면" loading="lazy"></div><figcaption><b>운동 기록</b>세트별 무게·횟수, 총 볼륨 6,000kg 자동 계산</figcaption></figure>
         <figure class="ph"><div class="ph-frame"><img src="rappo-2.png" alt="회원 변화 그래프 화면" loading="lazy"></div><figcaption><b>변화 그래프</b>부위별 볼륨 · 체중 변화</figcaption></figure>
@@ -970,11 +939,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         <div class="pnum"><a data-talk href="#" target="_blank" rel="noopener" class="ask">톡톡 문의 <span class="arw">→</span></a></div>
       </div>
     </div>
-    <div class="opt-grid rv">
-      <div class="opt">회원 운동복 대여 <span>10,000원<i>/월</i></span></div>
-      <div class="opt">개인 물품 보관함 <span>10,000원<i>/월</i></span></div>
-      <div class="opt">수건 대여 <span>10,000원<i>/월</i></span></div>
-    </div>
+    <p class="opt-line rv">부가 옵션 — 회원 운동복 대여 · 개인 물품 보관함 · 수건 대여 <b>각 10,000원/월</b></p>
     <p class="price-foot rv">
       ✅ 혜택 01 · 02는 <b>1인 1회 한정</b>으로 제공됩니다<br>
       ※ 회원권 금액은 상담을 통해 개별 안내드립니다. 혜택 금액은 부가세 포함 기준입니다.
@@ -1057,34 +1022,13 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
       <div class="info"><span class="ico">📍</span><div><b>오시는 길</b><span>서울시 동대문구 왕산로 190, 지하 2층<br>청량리역 5번 · 6번출구 중간지점</span></div></div>
       <div class="info"><span class="ico">✉️</span><div><b>Email</b><span><a href="mailto:trendymakert@gmail.com">trendymakert@gmail.com</a></span></div></div>
     </div>
+    <a class="map-strip rv" id="mapBox" href="https://map.naver.com/p/entry/place/1645431365" target="_blank" rel="noopener">
+      <img src="map.jpg" alt="트렌디우먼휘트니스 청량리역점 위치 지도" loading="lazy" onerror="this.parentNode.remove()">
+      <span class="map-chip">📍 서울시 동대문구 왕산로 190, 지하 2층 · 청량리역 5 · 6번출구 중간 — 네이버 지도 열기 →</span>
+    </a>
   </div>
 </section>
 
-<!-- ===== LOCATION ===== -->
-<section class="bg-gray">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="eyebrow">Location</span>
-      <h2 class="h2">오시는 길</h2>
-    </div>
-    <div class="loc-box rv">
-      <a class="map-ph" id="mapBox" href="https://map.naver.com/p/entry/place/1645431365" target="_blank" rel="noopener">
-        <img src="map.jpg" alt="트렌디우먼휘트니스 청량리역점 위치 지도" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-        <div class="ph-in"><div class="pin">📍</div><b>청량리역 5번출구 · 6번출구 중간지점</b><span class="sub2">블리비의원 건물 지하 2층</span></div>
-        <span class="map-chip">📍 트렌디우먼휘트니스 청량리역점 · 지하 2층</span>
-      </a>
-      <div class="loc-info">
-        <div>
-          <h4>트렌디우먼휘트니스 청량리역점</h4>
-          <p class="addr">서울시 동대문구 왕산로 190, 지하 2층</p>
-          <p class="hours">영업시간 월–금 06:00 – 23:00 · 토 08:00 – 20:00 · 일 정기휴무</p>
-          <p>블리비의원 건물 지하 2층 · 청량리역 5번출구와 6번출구 중간지점</p>
-        </div>
-        <a href="https://map.naver.com/p/entry/place/1645431365" target="_blank" rel="noopener" class="btn btn-grad">네이버 지도로 보기 <span class="arw">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
