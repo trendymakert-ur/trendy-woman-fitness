@@ -344,6 +344,10 @@ td.off{color:#C9CDD3;font-size:13px}
 .pt-quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .pq .tn-new{font-style:normal;margin-left:5px;font-size:9.5px;font-weight:800;letter-spacing:.08em;padding:2px 6px;border-radius:5px;background:#fff;color:var(--accent-2)}
 .pq{position:relative;margin:0;padding:18px 18px 16px;border-radius:var(--r);background:rgba(255,255,255,.06);border:1px solid var(--line-d);display:flex;flex-direction:column}
+.pq-photo{position:relative;display:block;float:right;width:104px;height:132px;margin:2px 0 8px 14px;border-radius:12px;overflow:hidden;border:1px solid var(--line-d);flex:none}
+.pq-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.pq-photo:hover img{transform:scale(1.06)}
+.pq-cap{position:absolute;left:0;right:0;bottom:0;padding:4px 0;text-align:center;font-size:9.5px;font-weight:800;letter-spacing:.04em;color:#fff;background:linear-gradient(transparent,rgba(3,199,90,.92))}
 .pq .tn{display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:800;letter-spacing:.04em;padding:5px 11px;border-radius:999px;background:var(--grad);color:#fff;margin-bottom:12px}
 .pq p{margin:0;font-size:13.6px;color:rgba(255,255,255,.82);line-height:1.8;flex:1}
 .pq p b{color:#fff}
@@ -704,21 +708,25 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
     <p class="pq-head rv">트레이너별 실제 회원 후기 — 네이버 플레이스 리뷰에서 발췌</p>
     <div class="pt-quotes">
       <blockquote class="pq rv">
+        <a class="pq-photo" href="https://map.naver.com/p/entry/place/1645431365?placePath=%2Freview" target="_blank" rel="noopener"><img src="rv-youngjun.jpg" alt="김영준 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="pq-cap">네이버 리뷰</span></a>
         <span class="tn">김영준 트레이너</span>
         <p>몸에 대한 이해도가 정말 높으세요. 평소 목이랑 승모근이 자주 아팠는데 케어를 받고 나니 걸리는 것 없이 가벼워졌어요. 허리가 아파서 교정 운동까지 진행했는데 <b>신기할 정도로 통증이 사라졌어요.</b> 단순한 운동 지도가 아니라 몸의 불균형까지 정확히 짚어주십니다. 운동 전 컨디션을 앱으로 공유하면 그에 맞춰 케어해 주세요.</p>
         <footer>hh**** 님 · 방문 9회 · ★★★★★</footer>
       </blockquote>
       <blockquote class="pq rv">
+        <a class="pq-photo" href="https://map.naver.com/p/entry/place/1645431365?placePath=%2Freview" target="_blank" rel="noopener"><img src="rv-ayoon.jpg" alt="이아윤 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="pq-cap">네이버 리뷰</span></a>
         <span class="tn">이아윤 트레이너</span>
         <p>운동한 지 3개월 차, <b>벌써 7kg 정도 감량에 성공했어요!</b> 아윤쌤이 체계적으로 지도해 주실 뿐만 아니라 식단까지 꼼꼼하게 봐주시고 항상 따뜻한 격려를 해주셔서 큰 힘이 됐어요. 덕분에 운동이 습관이 되어 거의 매일 나오게 됐고, 체력도 많이 늘었어요. 개인별 맞춤 프로그램 덕분에 효과를 제대로 보고 있습니다.</p>
         <footer>삐삐삐삐삡 님 · 방문 3회 · ★★★★★ <em>· 이후 30회 수업 후 "체지방 10kg 감량" 후기 추가</em></footer>
       </blockquote>
       <blockquote class="pq rv">
+        <a class="pq-photo" href="https://map.naver.com/p/entry/place/1645431365?placePath=%2Freview" target="_blank" rel="noopener"><img src="rv-eunyoung.jpg" alt="박은영 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="pq-cap">네이버 리뷰</span></a>
         <span class="tn">박은영 트레이너</span>
         <p>연장해서 이번이 두 번째 PT예요. 첫 운동이었는데 마음 잘 맞는 좋은 쌤을 만나서 좋아요. 은영쌤이랑 운동해서 <b>두 달도 안 돼서 10kg 뺐고, 안 좋았던 자세도 엄청 좋아졌어요.</b> 운동이 아니라 재활 수준이에요. 남의 시선도 신경 안 쓰여서 조용히 잘 다니고 있어요.</p>
         <footer>qor99 님 · 방문 3회 · ★★★★★</footer>
       </blockquote>
       <blockquote class="pq rv">
+        <a class="pq-photo" href="https://map.naver.com/p/entry/place/1077112071?placePath=%2Freview" target="_blank" rel="noopener"><img src="rv-sanga.jpg" alt="김상아 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="pq-cap">네이버 리뷰</span></a>
         <span class="tn">김상아 트레이너 <em class="tn-new">NEW</em></span>
         <p>선생님과 30회째 PT를 받고 있습니다. 전문적인 지식과 지치지 않는 열정 덕분에 매 수업이 즐겁고 유익했어요. 수업을 진행할수록 <b>몸도 마음도 몰라보게 건강해졌고, 운동에 대한 자신감도 크게 생겼습니다.</b> 개인 목적에 맞춰 매번 체계적인 루틴을 준비해 오시는 모습이 정말 프로페셔널했어요.</p>
         <footer>dla**** 님 · ★★★★★</footer>
